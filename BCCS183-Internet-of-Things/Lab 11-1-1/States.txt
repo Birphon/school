@@ -1,0 +1,54 @@
+Door Closed + Alarm Enabled
+    -> Correct Password
+        -> Door Open + Alarm Disabled
+        -> "Door: Open\nAlarm Disabled"
+    -> Incorrect Password
+        -> Door Closed + Alarm Enabled
+        -> "Door: Closed\nAlarm Enabled"
+
+Door Closed + Alarm Disabled
+    -> Alarm On
+    -> Correct Password
+        -> Door Open + Alarm Disabled
+        -> "Door: Open\nAlarm Disabled"
+    -> Incorrect Password
+        -> Door Closed + Alarm Enabled
+        -> "Door: Closed\nAlarm Enabled"
+
+Door Open + Alarm Enabled
+    -> Alarms On
+    -> Correct Password
+        -> Door Open + Alarm Disabled
+        -> "Door: Open\nAlarm Disabled"
+    -> Incorrect Password
+        -> Door Closed + Alarm Enabled
+        -> "Door: Closed\nAlarm Enabled"
+
+Door Open + Alarm Disabled
+    -> Defaults Alarm Enabled
+
+
+# Wording:
+# Alarm Disabled means that the Alarm system isn't enabled meaning the alarm can not flash
+# Alarm Enabled means that the Alarm system is enabled meaning the alarm can flash
+# Alarm Triggered means that the alarm is flashing
+# Alarm not Reset means that the alarm is flashing and can not be turnned off - alarm will keep flashing
+# Alarm reset means that the alarm is flashing and can be turned off - well the code turns off the alarm
+
+if alarm == disabled:
+    door can be open and closed manually
+
+if door == open
+    alarm can't be set
+
+if alarm == enabled:
+    if door == open:
+        Trigger Alarm
+
+if alarm == triggered
+    if door == closed
+        alarm not reset
+
+if alarm == triggered
+    if password == 12345
+        alarm reset

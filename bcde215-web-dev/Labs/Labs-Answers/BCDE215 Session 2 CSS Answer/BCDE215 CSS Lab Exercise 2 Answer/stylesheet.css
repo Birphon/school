@@ -1,0 +1,90 @@
+/* TYPOGRAPHY */
+
+body {
+    font-family: Georgia;
+    line-height: 1.5;
+}
+
+nav, h1, h2, #site-name, .caption, footer a {
+    font-family: "Century Gothic";
+}
+
+h1 {
+    font-size: 3rem;
+    
+    /* We don't want the h1 to be bold. */
+    font-weight: normal;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+}
+
+#site-name {
+    font-size: 2rem;
+}
+
+nav {
+    font-size: 1.25rem;
+}
+
+.caption {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.painting-title {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME */
+
+body {
+    color: #444444;
+}
+
+header {
+    background-color: #d4af37;
+}
+
+nav {
+    background-color: #adb3ad;
+}
+
+#main-image {
+    background-color: #dedede;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+#active-page {
+    color: #ffff00;
+}
+
+footer {
+    background-color: #666666;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+
+/* NAVIGATION */
+
+nav ul, footer ul, #paintings {
+    list-style-type: none;
+}
+
+nav a, footer ul a {
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+Thread.
+
+On 11th of May I was waiting for my Bus to go from Blenhim Road to the Bus Interchange. As I was waiting I was listening to the radio station ZM on its Christchurch Frequency of 91.3FM. There was a segment that the two hosts had where they talked about how a New South Wales Man (Solo Father) was saving money by limiting the use of power. He didn't have a hot shower but let his kids have them. He never turned on lights until he was unable to see and the only light that was on was a bulb (I assume LED) that he would carry around room to room. The radio hosts wanted to know if there was any other saving tips/tricks that people were doing. A lot of people Phoned/Texted in about insurrance both about overlapping insurrance and the likes of Car Insurrance since as the car gets older the less its worth meaning the less you should really be paying. However there was one that weirdly struck out to me and that was the fact that a Women called in and mentioned a Facebook group with a large number of women all over New Zealand, that basically ran a "Dress Swap" as its common for women to only wear a dress once they made it so they could Swap or Sell their dresses. I thought that Facebook Group wouldn't be the best of ways to do it and nor would a Facebook Marketplace or TradeMe would either since there isn't a "Distinct" way to directly find this so I thought about "Thread" an Ecom website that is basically this idea turned into an actual website.
+Needs:
+    - Account Management
+        - Accounts to have:
+            - Size
+            - Location
+        - Allow lisitings
+            - Toggle Default
+                - Default will either be "Swap" or "Sell"
+                - This would be the 'prefered' option
+            - the alternate can be set as well
+        - Allow deletions of listings
+            - mistaken listing
+        - Allow for "Logging" of listings
+            - Sold Listing
+            - Failed Listing
+            - Swapped Listing

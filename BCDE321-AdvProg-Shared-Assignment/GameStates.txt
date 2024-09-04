@@ -1,0 +1,8 @@
+Game States:
+    START: This indicates the start of the game and will... start the game
+    END: This indicates that the player has ran out of time so the game has ended
+    PLAY: This means the game has started - happens right after the map is made
+    DEAD: This indicates the player has died -- Note: END and DEAD are basically the same, just for output formatting to know what happened to the player
+    MOVING: The player can move
+    ROTATE: The player can rotate a tile
+    ZOMBIES: There are zombies on the tile - Player can do their actions

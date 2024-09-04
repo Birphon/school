@@ -1,0 +1,87 @@
+@startuml
+class Fileable
+    {
+        private readonly Level _level
+        Fileable(Level level)
+        int GetColumnCount()
+        int GetRowCount()
+        Part WhatsAt(int row, int column)
+    }
+
+class Filer
+    {
+        private Saver _saver;
+        private Loader _loader;
+        Filer(Saver saver, Loader loader)
+        string Load(string filename)
+        void Save(string filename, IFileable callMeBackforDetails)
+    }
+
+interface IFileable
+    {
+        Part WhatsAt(int row, int column);
+        int GetColumnCount();
+        int GetRowCount();
+    }
+
+interface IFiler
+    {
+        void Save(string filename, IFileable callMeBackforDetails);
+        string Load(string filename);
+    }
+
+interface ILoader
+    {
+        string Load(string fileName);
+    }
+
+interface ISaver
+    {
+        void Save(string filename, IFileable callMeBackforDetails);
+    }
+
+class Loader
+    {
+        Level Level { get; private set; }
+        string Load(string fileName)
+    }
+
+class Saver
+    {
+        private readonly Level _level;
+        Saver(Level level)
+        void Save(string filename, IFileable callMeBackforDetails)
+   }
+
+class Compressor
+    {
+        IConvert()
+        IChecker()
+    }
+
+class Level 
+    { 
+        Just_Vibing_Here
+    }
+
+interface IConverter
+    {
+        string Expanded {get;};
+        string Compressed {get;};
+        void Compress (string uncompressedLevel);
+        void Expand(string uncompressedLevel);
+    }
+
+interface IChecker
+    {
+        PreExpandingCheck(string Input)
+        PreCompressingCheck(string Input)
+    }
+
+Compressor <|-- IChecker
+Compressor <|-- IConverter
+Fileable <|-- IFileable
+Filer <|-- IFiler
+Loader <|-- ILoader
+Saver <|-- ISaver
+@enduml

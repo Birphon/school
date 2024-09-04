@@ -1,0 +1,13 @@
+Here is an example that shows three different layouts, requiring grid and flexboxes. Start by viewing the page in the browser and making the window narrow to see the single-column layout. Then gradually increase the width of the window, so that you see all three different layouts. As well as element size and positioning changes, some text size and colour changes have been made, so that you can see that media queries can be used to change any aspect of a page's styling.
+
+NOTE: more than one media query can be true at the same time. This is what happens for the second media query in this example - when it is true the first media query must also be true. So, both lots of CSS (in the media queries) would be applied by the browser. Use the inspector to see this being applied by the browser. Here are the media queries expressed as IF statements in something like Python:
+
+if window-width >= 44em:
+   print("The window is at least 44ems wide.")
+
+if window-width >= 72em:
+   print("The window is at least 72ems wide.")
+   
+So, if the window is 76ems wide, then the output of this program would be:
+The window is at least 44ems wide.
+The window is at least 72ems wide.

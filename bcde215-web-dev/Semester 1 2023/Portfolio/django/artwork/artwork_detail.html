@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ artwork.artwork_name }} - Artworks NZ
+{% endblock %}
+
+{% block content %}
+<section class="artwork-detail-section">
+    <h2>{{ artwork.artwork_name }}</h2>
+    <p><strong>Artist:</strong> {{ artwork.artist.full_name }}</p>
+    <p><strong>Media Type:</strong> {{ artwork.media_type }}</p>
+    <p><strong>Completion Date:</strong> {{ artwork.completion_date }}</p>
+    <p><strong>Price:</strong> {{ artwork.price }}</p>
+    <p><strong>Note:</strong> {{ artwork.note }}</p>
+</section>
+{% endblock %}

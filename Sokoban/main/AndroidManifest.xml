@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.java_sem1_2020_assignment3_sokoban">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="SOKOBAN"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LevelOne"
+            android:parentActivityName=".Main_Menu" />
+        <activity
+            android:name=".LevelTwo"
+            android:parentActivityName=".Main_Menu" />
+        <activity
+            android:name=".Level_Selector"
+            android:parentActivityName=".Main_Menu" />
+        <activity android:name=".Main_Menu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

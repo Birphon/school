@@ -1,0 +1,132 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaM (Previous Years Work)", "TaM (Previous Years Work)\TaM (Previous Years Work).csproj", "{C277AC17-BD87-46FC-8DF1-9D85C8582E7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHandler_Jared", "FileHandler\FileHandler_Jared.csproj", "{92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D6D67BDB-BF10-4D9B-916A-DFC0C28A5828} = {D6D67BDB-BF10-4D9B-916A-DFC0C28A5828}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Simone", "Game\Game_Simone.csproj", "{2F6E169D-0D96-4BCB-A8B0-D424CB760FE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner", "LevelDesigner - Brock\LevelDesigner.csproj", "{D6D67BDB-BF10-4D9B-916A-DFC0C28A5828}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner_Daniel", "LevelDesigner - Daniel\LevelDesigner_Daniel.csproj", "{7F21D113-4358-46F3-95F4-CE9E8D6CF14F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B7AC6FD5-CED5-4D72-8BD1-C22CDA92FC59}"
+	ProjectSection(SolutionItems) = preProject
+		chess_maze\ChessImages\Bishop.png = chess_maze\ChessImages\Bishop.png
+		chess_maze\ChessImages\Blank.png = chess_maze\ChessImages\Blank.png
+		chess_maze\ChessImages\King.png = chess_maze\ChessImages\King.png
+		chess_maze\ChessImages\Knight.png = chess_maze\ChessImages\Knight.png
+		chess_maze\ChessImages\Rook.png = chess_maze\ChessImages\Rook.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{E8D567A5-4140-4C10-AF34-64B8E600D8B0}"
+	ProjectSection(SolutionItems) = preProject
+		chess_maze\Interfaces\Direction.cs = chess_maze\Interfaces\Direction.cs
+		chess_maze\Interfaces\IChecker.cs = chess_maze\Interfaces\IChecker.cs
+		chess_maze\Interfaces\IConverter.cs = chess_maze\Interfaces\IConverter.cs
+		chess_maze\Interfaces\IFileable.cs = chess_maze\Interfaces\IFileable.cs
+		chess_maze\Interfaces\IFiler.cs = chess_maze\Interfaces\IFiler.cs
+		chess_maze\Interfaces\IGame.cs = chess_maze\Interfaces\IGame.cs
+		chess_maze\Interfaces\ILevel.cs = chess_maze\Interfaces\ILevel.cs
+		chess_maze\Interfaces\ILoader.cs = chess_maze\Interfaces\ILoader.cs
+		chess_maze\Interfaces\ISaver.cs = chess_maze\Interfaces\ISaver.cs
+		chess_maze\Interfaces\Part.cs = chess_maze\Interfaces\Part.cs
+		chess_maze\Interfaces\Program.cs = chess_maze\Interfaces\Program.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brock_Assignment2_Sem2_2022", "Brock_Assignment2_Sem2_2022", "{5A4EBDA1-3446-4FF7-A1A5-9BCDB01D1A31}"
+	ProjectSection(SolutionItems) = preProject
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Direction.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Direction.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Game.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Game.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IChecker.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IChecker.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IConverter.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IConverter.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IFileable.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IFileable.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IFiler.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IFiler.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IGame.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\IGame.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\ILevel.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\ILevel.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\ILoader.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\ILoader.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\ISaver.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\ISaver.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Level.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Level.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Part.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Part.cs
+		chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Program.cs = chess_maze\Brock_A2_Sem2_2022\Brock_A2_Sem2_2022\Program.cs
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHandler_Tests", "FileHandler - Tests\FileHandler_Tests.csproj", "{0B2AD090-2437-4F39-99F7-E8E4572F3B65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0} = {92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Tests", "Game - Tests\Game_Tests.csproj", "{FD4001C2-1946-48AA-8BB8-28A658122AC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner_Brock_Tests", "LevelDesigner - Brock - Tests\LevelDesigner_Brock_Tests.csproj", "{7D677E3B-8AF6-4573-A984-09D4BFC69025}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner_Daniel_Tests", "LevelDesigner - Daniel - Tests\LevelDesigner_Daniel_Tests.csproj", "{BD3EC1C1-B917-4C44-810D-B590228EA401}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner - Rohan", "LevelDesigner - Rohan\LevelDesigner - Rohan.csproj", "{3E486B17-1DDF-4874-8E7C-328C07C48CEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner - Rohan - Tests", "LevelDesigner - Rohan - Tests\LevelDesigner - Rohan - Tests.csproj", "{46F6C6BC-FD84-48F1-93C7-D74CDB04F97B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C277AC17-BD87-46FC-8DF1-9D85C8582E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C277AC17-BD87-46FC-8DF1-9D85C8582E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C277AC17-BD87-46FC-8DF1-9D85C8582E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C277AC17-BD87-46FC-8DF1-9D85C8582E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92AC81AA-0D8C-49C9-BC6A-CE7EDE0A1AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6E169D-0D96-4BCB-A8B0-D424CB760FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6E169D-0D96-4BCB-A8B0-D424CB760FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6E169D-0D96-4BCB-A8B0-D424CB760FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6E169D-0D96-4BCB-A8B0-D424CB760FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D67BDB-BF10-4D9B-916A-DFC0C28A5828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D67BDB-BF10-4D9B-916A-DFC0C28A5828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D67BDB-BF10-4D9B-916A-DFC0C28A5828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D67BDB-BF10-4D9B-916A-DFC0C28A5828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F21D113-4358-46F3-95F4-CE9E8D6CF14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F21D113-4358-46F3-95F4-CE9E8D6CF14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F21D113-4358-46F3-95F4-CE9E8D6CF14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F21D113-4358-46F3-95F4-CE9E8D6CF14F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2AD090-2437-4F39-99F7-E8E4572F3B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2AD090-2437-4F39-99F7-E8E4572F3B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2AD090-2437-4F39-99F7-E8E4572F3B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2AD090-2437-4F39-99F7-E8E4572F3B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4001C2-1946-48AA-8BB8-28A658122AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4001C2-1946-48AA-8BB8-28A658122AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4001C2-1946-48AA-8BB8-28A658122AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4001C2-1946-48AA-8BB8-28A658122AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D677E3B-8AF6-4573-A984-09D4BFC69025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D677E3B-8AF6-4573-A984-09D4BFC69025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D677E3B-8AF6-4573-A984-09D4BFC69025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D677E3B-8AF6-4573-A984-09D4BFC69025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3EC1C1-B917-4C44-810D-B590228EA401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3EC1C1-B917-4C44-810D-B590228EA401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3EC1C1-B917-4C44-810D-B590228EA401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3EC1C1-B917-4C44-810D-B590228EA401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E486B17-1DDF-4874-8E7C-328C07C48CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E486B17-1DDF-4874-8E7C-328C07C48CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E486B17-1DDF-4874-8E7C-328C07C48CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E486B17-1DDF-4874-8E7C-328C07C48CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F6C6BC-FD84-48F1-93C7-D74CDB04F97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F6C6BC-FD84-48F1-93C7-D74CDB04F97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F6C6BC-FD84-48F1-93C7-D74CDB04F97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F6C6BC-FD84-48F1-93C7-D74CDB04F97B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6924CD2-E1A7-4E11-B14F-3DC014B061E0}
+	EndGlobalSection
+EndGlobal

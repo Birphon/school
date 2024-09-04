@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT141 Responsive Design Sample</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <h1>Media Query Simple Example</h1>
+    </header>
+    
+    <main>
+        <h2>About this example</h2>
+        <p>This example shows a simple layout change from a single-column to two columns when the viewport (window) is wide enough to fit two columns. Notice that the layout code for the single column occurs first and is not in a media query - this makes the single column the 'default' layout. This is a good approach because browsers that don't understand media queries and/or grid (such as Internet Explorer until recently) can still display the single-column layout. At the bottom of this stylesheet there is a media query that tests the width of the viewport and contains the grid layout.</p>
+        <p>Check what happens when you change the width of the browser window from very narrow to very wide when you are viewing the web page.</p>
+        <p>The default layout (before any media queries take effect) is a single-column layout with the principal structural elements as blocks in normal flow. That is: the header, main, and aside are allowed to take their normal positions one after the other down the window. We don't need a grid or other layout CSS for this.</p>
+        <p>Why is there a picture of a cute kitten on a web page about responsive design? I don't know.</p>
+    </main>
+    
+    <aside>
+        <h2>Meet Boris!</h2>
+        <p>Boris says, "Read the text on this page, student learner!"</p>
+        <img src="boris.jpg">
+    </aside>
+    
+    <footer>
+        <p>Created for Ara, 2020.</p>
+    </footer>
+</body>
+</html>

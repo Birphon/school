@@ -1,0 +1,247 @@
+        /* RESET - DO NOT EDIT THIS SECTION */
+
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+            /* Cancel out some differences between browser defaults */
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        * {
+            /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
+            box-sizing: border-box;
+        }
+
+        ul, ol {
+            list-style-position: inside;
+        }
+
+        /* END OF RESET */
+
+
+/* YOUR ANSWER HERE */
+/* LAYOUT */
+
+/* Flexboxes */
+h1 {
+	display: flex;
+    justify-content: space-around;
+}
+
+aside > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*aside > div > p{
+    margin: auto;
+	display: flex;
+	justify-content: space-around;
+}*/
+
+/* Margins and padding */
+
+nav, main, aside, footer {
+    padding: 1em;
+}
+
+h1 {
+	padding: 0.5em;
+}
+
+h3 {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+header > p {
+    margin-right: 1em;
+}
+
+aside div {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Lucida Sans, Arial,sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+aside p {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.place-name {
+    font-style: italic;
+}
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+h1, h2, h3 {
+	color: #990f0f;
+}
+
+header, footer {
+    background-color: #1d5893;
+}
+
+aside {
+    background-color: #fcf2d9;
+}
+
+aside > div {
+	border: 3px solid #444444;
+}
+
+footer, header > h1{
+    color: white;
+}
+
+.selected {
+    color: #990f0f;
+}
+
+a:hover {
+    color: #d32c2c;
+}
+
+/* NAVIGATION */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+
+/* IMAGES */
+
+/* Don't forget this! */
+img {
+    width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+
+    /* Page grid */
+    
+    body {
+        display: grid;
+        grid-template-columns: 1fr 20em 40em 1fr;
+    }
+	
+	header, footer {
+        grid-column: 1 / 5;
+    }
+	nav {
+        grid-column: 2 / 4;
+    }
+	
+	aside {
+		grid-column: 2;
+		grid-row: 3;
+	}
+	
+	main {
+		grid-column: 3;
+	}
+	
+	/* Flexboxes */ 
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+	footer {
+        display: flex;
+        justify-content: space-around;
+    }
+	
+    nav li {
+        /* Push the list items away from each other in the flexbox */
+        margin: 0 2em;
+    }
+	
+	aside > div > * {
+        width: 50%;
+    }
+	
+	/* IMAGES */
+
+	.lead-in {
+		width: 8em;
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+	
+	@media screen and (min-width: 82em) {
+    
+    /* LAYOUT */
+    
+    /* Page grid */
+    body {
+        grid-template-columns: 1fr 15rem 40rem 20rem 1fr;
+    }
+
+    header, footer {
+        grid-column: 1 / 6;
+    }
+
+    nav {
+        grid-column: 2;
+    }
+
+    main {
+        grid-column: 3;
+    }
+
+    aside {
+        grid-column: 4;
+		grid-row: 2;
+    }
+    
+    
+    nav ul {
+        display: block;
+    }
+    
+    nav li {
+        margin-bottom: 0.5em;
+    }
+    
+    nav a {
+        font-size: 1.2rem;
+    }
+    
+    header > img {
+        width: 20rem;
+    }
+	
+	nav {
+		background-color: #fcf2d9;
+	}

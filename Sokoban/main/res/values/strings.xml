@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Java_Sem1_2020_Assignment3_sokoban</string>
+    <string name="button_start">START</string>
+    <string name="UButton">UP</string>
+    <string name="LButton">LEFT</string>
+    <string name="DButton">DOWN</string>
+    <string name="RButton">RIGHT</string>
+    <string name="button_LevelSelect">Select Level</string>
+    <string name="levelOneSelect">LEVEL ONE (1)</string>
+    <string name="levelTwoSelect">LEVEL TWO (2)</string>
+    <string name="button_Home">HOME</string>
+    <string name="BlankText">BlankText</string>
+</resources>

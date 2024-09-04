@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Backup Setup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="themes/prism.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AWS Setup<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ec2_linux_setup.html">AWS EC2 Setup</a></li>
+                            <li><a href="web_server_install.html">Web Server Install</a></li>
+                            <li><a href="website_setup_instruction.html">Website Setup</a></li>
+                            <li><a href="backup_instructions.html">Backup Setup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
+                            <li><a href="ecom.html">Ecommerce</a></li>
+                            <li><a href="django.html">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Section: Introduction -->
+                <section>
+                    <h1 class="text-center">Amazon EC2 Website Setup Instructions</h1>
+                    <p class="text-center">7 June 2022, Chris Bartlett</p>
+                    <p class="text-center"><span class="alert">IMPORTANT: Read all instructions before starting.</span>
+                    </p>
+                    <p>For safety, you should set up regular, automated backups of your instance. Backups will add a
+                        very small charge to your account, but are rather important.</p>
+                </section>
+
+                <section>
+                    <h2>A cautionary tale</h2>
+                    <p>A few years ago a student ran a command in the wrong location on their instance and managed to
+                        remove their ability to do much on their instance. They had to create a new instance. If you
+                        have backups of your instance, you can quickly (less than a minute) create a new instance with
+                        all your projects, data, etc. from backup.</p>
+                    <p>Technical explanation: The student accidentally changed the ownership of the sudoers file to
+                        ubuntu instead of root. This meant that they were unable to use sudo. Therefore, they could not
+                        use sudo to restore the correct ownership of the sudoers file. This is known as an own goal…
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Create a backup plan</h2>
+                    <p>Go to the AWS Backup service in your AWS control panel. NOTE: This is not part of EC2 – it is a
+                        separate service.</p>
+                    <p>Click the “Create Backup plan” button. </p>
+                    <p>On the Create Backup plan > Start options panel, do the following:
+                    <ol>
+                        <li>Make sure “Start with a template” is selected.</li>
+                        <li>From the “Choose template” dropdown, select “Daily-35day-Retention”.</li>
+                        <li>Enter a name like “EC2InstanceBackup” in the “Backup plan name” box.</li>
+                    </ol>
+                    See the screenshot below to see what the screen should look like at this point.
+                    <img src="img/start_options.png">
+                    </p>
+                    <p>To save this backup plan, scroll down and click the “Create Plan” button.</p>
+                    <p>This will take you back to the summary screen for the backup plan. NOTE: your instance has not
+                        yet been added to the plan - carry on to the next page here in order to do this…</p>
+                </section>
+
+                <section>
+                    <h2>Add your instance to the backup plan</h2>
+                    <p>On the summary screen, click the “Assign resources” button.</p>
+                    <p>Go to the “Assign resources” panel.</p>
+                    <p>
+                    <ol>
+                        <li>On this panel in the General section you need to enter a resource assignment name, such as
+                            “MyInstance”.</li>
+                        <li>Then in the Assign Resources section leave it set to “Include all resource types”.</li>
+                        <li>To finish this panel, click the “Assign Resources” button.</li>
+                    </ol>
+                    </p>
+                    <p>See the screenshot below:<br>
+                        <img src="img/assign_resource.png">
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Check your backup is running</h2>
+                    <p>The first backup will occur within 24 hours, so you will probably need to wait until tomorrow
+                        before checking as follows.</p>
+                    <p>To check that your instance is being backed up, go to the EC2 control panel and under Elastic
+                        Block Store in the left-hand menu, select Snapshots. This is where your backups (“snapshots”)
+                        will be listed. Initially, there will just be one, but each day another will be added. See the
+                        image below.<br>
+                        <img src="img/backup_check.png" </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

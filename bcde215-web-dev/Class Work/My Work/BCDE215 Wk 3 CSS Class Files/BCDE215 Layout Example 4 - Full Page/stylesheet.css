@@ -1,0 +1,143 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* == END RESET ================== */
+
+
+
+
+/* == PAGE GRID ================== */
+
+
+
+
+/* == FLEXBOXES ================== */
+
+
+
+
+/* == PADDING AND MARGINS ========= */
+
+
+
+
+
+
+
+/* == TYPOGRAPHY ================== */
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+#site-title, h1, h2 {
+    font-family: "Century Gothic", Tahoma, sans-serif;
+}
+
+#site-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+nav a {
+    font-size: 1.2rem;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.title {
+    font-style: italic;
+}
+
+main ul {
+    list-style-position: inside;
+    margin-bottom: 1em;
+}
+
+
+/* COLOUR SCHEME */
+
+body {
+    color: #333333;
+}
+
+header {
+    background-color: #346482;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #d1d8da;
+}
+
+aside {
+    background-color: #eaf5fc;
+}
+
+footer {
+    background-color: #404040;
+    color: #ffffff;
+}
+
+h1, h2 {
+    color: #346482;
+}
+
+nav a {
+    color: #000000;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.active, a:hover {
+    color: #ff0000;
+}
+
+figure {
+    border: 1px solid #000000;
+    background-color: #d1d8da;
+}
+
+
+/* NAVIGATION */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+
+/* IMAGES */
+
+img {
+    width: 100%;
+}

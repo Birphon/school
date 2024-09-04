@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Tips</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="themes/prism.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AWS Setup<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ec2_linux_setup.html">AWS EC2 Setup</a></li>
+                            <li><a href="web_server_install.html">Web Server Install</a></li>
+                            <li><a href="website_setup_instruction.html">Website Setup</a></li>
+                            <li><a href="backup_instructions.html">Backup Setup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
+                            <li><a href="ecom.html">Ecommerce</a></li>
+                            <li><a href="django.html">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Section: Introduction -->
+                <section>
+                    <h1 class="text-center">PuTTY Tips</h1>
+                    <br>
+                    <p>Simply saving your PuTTY instance so you don't always need to enter in the same fields time and
+                        time again - You can even save a shortcut to your desktop <br> Note: On the Ara network if you
+                        go to a different PC this shortcut won't work - name the shortcut something along the lines of
+                        [RoomName]@[IPAddress]</p>
+                    <p>
+                        You can also dupelicate the instance of PuTTY - This allows you to have multiplie connections to
+                        the same AWS Connection but have different things running i.e. MySQL, being in Apache2 Directory
+                        and Your Websites Directory
+                    </p>
+                </section>
+
+                <section>
+                    <h1 class="text-center">WinSCP Tips</h1>
+                    <br>
+                    <p>Much like PuTTY, you can also save your WinSCP so you don't need to redo the fields. Again you
+                        can save to the desktop but you will run into the same issues on Ara Network</p>
+                    <p> Bookmarks are a wonderful little thing. This will allow you to quickly hop around to different
+                        locations easily. I like to keep my /var/www/ directory, /etc/apache2/sites-avalible/ directory
+                        and the Error Logs directory bookmarked</p>
+                    <p>You can also edit files within WinSCP and even use your favorite Text Editor - Note that saving
+                        files can be an issue if its Root since WinSCP doesn't have Root Permissions!</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+
+/* LAYOUT */
+
+
+header img {
+    width: 15rem;
+}
+
+nav, main, aside, footer {
+    padding: 1em;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: "Lucida Sans", Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 2em;
+}
+
+aside h2, aside h3 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+nav a {
+    text-transform: uppercase;
+}
+
+.caption {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+header, footer {
+    background-color: #223552;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #1a2940;
+}
+
+aside {
+	background-color: #eeeeee;
+}
+
+#album {
+    border: 1px solid #666666;
+}
+
+h1, h2 {
+    color: #0ab3be;
+}
+
+header a, nav a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #0fbcf5;
+}
+
+.selected {
+    color: #0ab3be;
+}
+
+
+/* NAVIGATION */
+
+header ul, nav ul, footer ul {
+    list-style-type: none;
+}
+
+header a, nav a {
+    text-decoration: none;
+}
+
+
+/* IMAGES & VIDEOS */
+
+.lead-image {
+    float: left;
+    width: 12em;
+    margin: 0 1em 1em 0;
+}
+
+
+/* RESPONSIVE DESIGN */

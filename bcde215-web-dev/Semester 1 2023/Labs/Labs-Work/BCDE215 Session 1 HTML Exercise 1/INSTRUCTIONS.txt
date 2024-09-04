@@ -1,0 +1,7 @@
+Instructions
+
+Create the necessary HTML to match the "Screenshot" image file included here. NOTE: Don't try to match the layout of the "Screenshot of styled page for reference" image - that would require CSS, which we haven't covered yet.
+
+Your answer should include structural elements. Refer to the "Screenshot of styled page for reference" image for help figuring out what structural elements there are.
+
+Your HTML should validate!

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Edit Artist - Artworks NZ
+{% endblock %}
+
+{% block content %}
+<section class="artist-update-section">
+    <h2>Edit Artist</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+</section>
+{% endblock %}

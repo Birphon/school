@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/loc00"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/three" />
+
+    <ImageView
+        android:id="@+id/loc01"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/loc00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/two" />
+
+    <ImageView
+        android:id="@+id/loc02"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/loc01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/three" />
+
+    <ImageView
+        android:id="@+id/loc03"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/loc02"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/two" />
+
+    <ImageView
+        android:id="@+id/loc10"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc00"
+        app:srcCompat="@drawable/four" />
+
+    <ImageView
+        android:id="@+id/loc11"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc10"
+        app:layout_constraintTop_toBottomOf="@+id/loc01"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc12"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc11"
+        app:layout_constraintTop_toBottomOf="@+id/loc02"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc13"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc12"
+        app:layout_constraintTop_toBottomOf="@+id/loc03"
+        app:srcCompat="@drawable/two" />
+
+    <ImageView
+        android:id="@+id/loc20"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc10"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc21"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc20"
+        app:layout_constraintTop_toBottomOf="@+id/loc11"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc22"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc21"
+        app:layout_constraintTop_toBottomOf="@+id/loc12"
+        app:srcCompat="@drawable/two" />
+
+    <ImageView
+        android:id="@+id/loc23"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc22"
+        app:layout_constraintTop_toBottomOf="@+id/loc13"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc30"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc20"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc31"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc30"
+        app:layout_constraintTop_toBottomOf="@+id/loc21"
+        app:srcCompat="@drawable/three" />
+
+    <ImageView
+        android:id="@+id/loc32"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc31"
+        app:layout_constraintTop_toBottomOf="@+id/loc22"
+        app:srcCompat="@drawable/one" />
+
+    <ImageView
+        android:id="@+id/loc33"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        app:layout_constraintStart_toEndOf="@+id/loc32"
+        app:layout_constraintTop_toBottomOf="@+id/loc23"
+        app:srcCompat="@drawable/zero" />
+
+    <ImageView
+        android:id="@+id/backMove"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc30"
+        app:srcCompat="@drawable/backmove" />
+
+    <ImageView
+        android:id="@+id/resetMap"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backMove"
+        app:layout_constraintTop_toBottomOf="@+id/loc33"
+        app:srcCompat="@drawable/restart_level" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loc00"
+        app:layout_constraintEnd_toEndOf="@+id/loc00"
+        app:layout_constraintStart_toStartOf="@+id/loc00"
+        app:layout_constraintTop_toTopOf="@+id/loc00"
+        app:srcCompat="@drawable/berserker_chess_piece_norway" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

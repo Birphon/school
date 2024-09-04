@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create Artwork - Artworks NZ
+{% endblock %}
+
+{% block content %}
+<section class="artwork-create-section">
+    <h2>Create Artwork</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+</section>
+{% endblock %}

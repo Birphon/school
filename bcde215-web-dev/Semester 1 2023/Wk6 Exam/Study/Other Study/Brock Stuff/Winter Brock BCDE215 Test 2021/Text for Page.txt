@@ -1,0 +1,63 @@
+Title
+=====
+
+NZ Lighthouses :: Cape Reinga
+
+
+Header
+======
+
+NZ Lighthouses
+
+
+Main menu
+=========
+
+Bluff
+Cape Reinga
+Nugget Point
+Waipapa Point
+
+
+Text for images
+===============
+
+The following text should display if images cannot be loaded:
+cape-reinga-lighthouse.jpg: "Cape Reinga Lighthouse"
+cape-reinga.jpg: "Cape Reinga"
+cape-palliser-lighthouse.jpg: "Cape Palliser Lighthouse"
+
+
+Page text
+=========
+
+Cape Reinga Lighthouse
+
+The lighthouse at Cape Reinga was built in 1941 and first lit during May of that year, replacing a lighthouse located on nearby Motuopao Island, which had been built 1879. In 1987, the lighthouse was fully automated and the lighthouse keepers were withdrawn. The previous 1000 watt light and its revolving Fresnel lens have since been replaced with a tiny 50 watt flashing beacon, lodged in their place in the huge lantern.
+
+Link: en.wikipedia.org/wiki/Cape_Reinga
+
+Cape Reinga, sometimes spelled R[e with a macron]inga, and officially Cape Reinga / Te Rerenga Wairua, is the northwesternmost tip of the Aupouri Peninsula, at the northern end of the North Island of New Zealand.
+
+
+News and Information
+
+Featured Lighthouse
+
+Constructed	1897
+Automated 1986
+Height 18 metres (59 ft)
+
+Cape Palliser Lighthouse
+
+Upcoming Events
+
+Join us for a nationwide tour of our amazing lighthouses.
+
+
+Bottom of page
+==============
+
+[copyright symbol] Ara, 2021
+Text and images all licenced under Creative Commons
+Website by CmBDesign

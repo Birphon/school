@@ -1,0 +1,11 @@
+What to do (Possibly) for assignment 3:
+    Finish off Assignment 2
+        Add difficulty
+        Add wall breaking
+        Add Save Game File Location
+        Rework Commands - Lots of logic here that shouldn't be!
+
+    Patterns:
+        Abstract Factory - https://refactoring.guru/design-patterns/abstract-factory
+            Outdoor
+            Indoor

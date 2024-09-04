@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Tutorial: Django</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="themes/prism.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AWS Setup<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ec2_linux_setup.html">AWS EC2 Setup</a></li>
+                            <li><a href="web_server_install.html">Web Server Install</a></li>
+                            <li><a href="website_setup_instruction.html">Website Setup</a></li>
+                            <li><a href="backup_instructions.html">Backup Setup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
+                            <li><a href="ecom.html">Ecommerce</a></li>
+                            <li><a href="django.html">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Section: Introduction -->
+                <section>
+                    <h1 class="text-center">Welcome to a Django Setup Tutorial</h1>
+
+                    <p>This will run you through the basics to get a Django Website up and running. Everything in
+                        <b>Square Brackets []</b> needs to be changed
+                    </p>
+                    <p>As mentioned on the Home Page - Errors can and will happen even if you follow this to a T</p>
+                </section>
+
+                <section>
+                    <h2> Certbotting </h2>
+                    <p> I like to run through the Certbot process first just so no issues happen here: </p>
+                    <p>
+                    <pre>sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/[project-directory].conf
+sudo nano /etc/apache2/sites-available/[project-directory].conf
+    [CHANGE THIS] #ServerName www.example.com --- remove the #, change www.example.com to your link
+    [CHANGE THIS] DocumentRoot /var/www/html --- delete html to [project-directory]
+sudo mkdir /var/www/[project-directory]
+sudo chown ubuntu /var/www/[project-directory]
+sudo a2ensite [project-directory]
+sudo systemctl reload apache2
+sudo certbot --apache</pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Ownership Changes </h2>
+                    <p> I notice that the Configuration Files (conf) files don't change to Ubuntu on creation: </p>
+                    <p>
+                    <pre>sudo chown ubuntu /etc/apache2/sites-available/[project-directory].conf
+sudo chown ubuntu /etc/apache2/sites-available/[project-directory]-le-ssf.conf</pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Python </h2>
+                    <p> Two simple commands, just be in your [project-directory]</p>
+                    <p>cd /var/www/[project-directory]</p>
+                    <p>
+                    <pre>python3 -m venv venv
+source venv/bin/activate</pre>
+                    </p>
+                    <p>First line installs a Python Enviroment to the Project. The second line activates the Python
+                        Enviroment, you will notice your cmd changed to (venv) instead of ubuntu</p>
+                </section>
+
+                <section>
+                    <h2> Packages </h2>
+                    <p> You can copy this whole block of code and paste it into the PuTTY cmd and it will run them all
+                        instead of going one at a time</p>
+                    <p>
+                    <pre>pip install django
+sudo apt install libapache2-mod-wsgi-py3
+sudo apt install default-libmysqlclient-dev
+pip install wheel
+pip install pillow
+pip install mysqlclient</pre>
+                    </p>
+                    <p>Djano is needed for making a Django application. WSGI is to make it so Django can run on an
+                        Apache Server. The rest is for Database Management stuff</p>
+                </section>
+
+                <section>
+                    <h2> Django </h2>
+                    <p> One simple command to make a Django Project</p>
+                    <p>
+                    <pre>django-admin startproject [name]</pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Django: File Moving </h2>
+                    <p> This is 100% OPTIONAL! It makes your project directory cleaner and meaning you don't need to
+                        have so much in File Pathways</p>
+                    <p>
+                    <pre>mv [django-project-name]/manage.py ./
+mv [django-project-name]/[django-project-name]/* [django-project-name]
+rm -r [django-project-name]/[django-project-name]/</pre>
+                    </p>
+                    <p>
+                        This basically makes it so you have [project-directory]/[django-project-name] instead of
+                        [project-directory]/[django-project-name]/[django-project-name]
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Django: Allow Hosts </h2>
+                    <p> Allowing the host makes it so you can run your Django on your link that you have</p>
+                    <p>
+                    <pre>sudo nano /var/www/[project-directory]/[django-project-name]/settings.py/</pre>
+                    </p>
+                    <p>
+                        simply edit the ALLOWED_HOSTS = [] to be ALLOWED_HOSTS = ['link'] -- Link being your website
+                        link
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Django: Migrations </h2>
+                    <p> Migrating files so it knows whats what, basically a reload. Do note: you will need to run this
+                        again when you have finished making your APP side of Django</p>
+                    <p>
+                    <pre>python manage.py makemigrations
+python manage.py migrate</pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Django: Running Server </h2>
+                    <p> THIS IS ONLY FOR DEVELOPMENT! this will only work on http://[yourlink]:8000, you should once
+                        everything is operational be able to just go to https://[yourlink] without running this server
+                    </p>
+                    <p>
+                    <pre>python manage.py runserver 0.0.0.0:8000</pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h2> Django: Database </h2>
+                    <p> Adding a database is rather simple, though do note the values you change</p>
+                    <p>
+                    <pre>sudo mysql -u root -p
+CREATE DATABASE [database_name] CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER '[database_user]'@'localhost' IDENTIFIED BY '[your_password]';
+GRANT ALL PRIVILEGES ON [database_name].* TO '[database_user]'@'localhost';
+exit</pre>
+                    </p>
+                    <p> Quote Marks are needed around the database_user and your_password. These values can be anything
+                        by the way</p>
+                    <p> You can now edit your [django-project-name]/settings.py with the database you just made. In this
+                        case the defaults is using Sqlite where as we use MySQL</p>
+                    <p> An example:
+                    <pre>
+sudo nano /var/www/[project-directory]/[django-project-name]/settings.py
+DATABASES = {
+'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'database',
+        'USER':'user',
+        'PASSWORD':'password',
+        'HOST':'localhost',
+        'PORT':'3306'
+    }
+}</pre>
+                    <p>
+                        The ENGINE gets changed to MySQL, we add NAME, USER, PASSWORD to match what we maed. HOST and
+                        PORT exist
+                    </p>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Django: WSGI</h2>
+                    <p>There has been issues with this one. It seems to be hit and miss and its always to be done with
+                        File Paths. Even if you think its right, nope you are most likely wrong. Right Click and Copy
+                        the Path from WinSCP for this and then like double check!</p>
+                    <p>This all goes in the /etc/apache2/sites-available/[project-directory]-le-ssf.conf</p>
+                    <p><b>NOTE: The . seen in the below commands is there because there is no escape character and it
+                            breaks</b></p>
+                    <p>
+                    <pre><.Directory /var/www/[project-directory]/[django-project-name]>
+<.Files wsgi.py>
+    Require all granted
+<./Files>
+<./Directory>
+
+WSGIDaemonProcess [wsgi_proj_name] python-path=/var/www/[project-directory]/[django-project-name] python-home=/var/www/[project-directory]/[django-project-name]/venv
+WSGIProcessGroup [wsgi_proj_name]
+WSGIScriptAlias / /var/www/[project-directory]/[django-project-name]/wsgi.py</pre>
+                    </p>
+                    <p> This gets slotted down the bottom but above the SSL lines. [wsgi_proj_name] can be whatever name
+                        you want be keep in mind you can only give this name ONCE to a project.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="js/navbar.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

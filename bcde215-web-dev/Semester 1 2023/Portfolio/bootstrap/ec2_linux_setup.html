@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>EC2 Setup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="themes/prism.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AWS Setup<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ec2_linux_setup.html">AWS EC2 Setup</a></li>
+                            <li><a href="web_server_install.html">Web Server Install</a></li>
+                            <li><a href="website_setup_instruction.html">Website Setup</a></li>
+                            <li><a href="backup_instructions.html">Backup Setup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
+                            <li><a href="ecom.html">Ecommerce</a></li>
+                            <li><a href="django.html">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Section: Introduction -->
+                <section>
+                    <h1 class="text-center">Amazon EC2 Linux Server Setup Instructions</h1>
+                    <p class="text-center">3 April 2023, Chris Bartlett</p>
+                    <p class="text-center"><span class="alert">IMPORTANT: Read all instructions before
+                            starting.</span></p>
+                </section>
+
+                <!-- Section: Prerequisite -->
+                <section>
+                    <h2>Prerequisite</h2>
+                    <p>You need an Amazon Web Services account.</p>
+                </section>
+
+                <!-- Section: AWS Account Security -->
+                <section>
+                    <h2>AWS Account Security</h2>
+                    <p>If your AWS account is compromised, someone can add resources to it such as powerful EC2
+                        instances,
+                        which are very expensive. This happened to a student recently: his account was compromised and
+                        he
+                        suddenly had a charge of about US$500 for a month. He did manage to have Amazon reverse the
+                        charge,
+                        but it took time and was stressful. So, my advice is:</p>
+                    <ol>
+                        <li>Do not re-use passwords from other services/websites you have accounts with. Reusing
+                            passwords
+                            is VERY UNWISE and is how the above student’s account was compromised.</li>
+                        <li>Set up multi-factor authentication for your AWS root user account. See the following video
+                            tutorial:
+                            <a href="https://pages.awscloud.com/how-to-enable-multi-factor-authentication-for-aws-account.html"
+                                target="_blank">How to Enable Multi-Factor Authentication for AWS Account</a>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Section: Programs -->
+                <section>
+                    <h2>Programs</h2>
+                    <p>The programs we need are available via your Ara login account. You can also download them on your
+                        own
+                        computers.</p>
+
+                    <h3>PuTTY & PuTTYgen</h3>
+                    <p>PuTTY is a terminal program for connecting to the server and managing it. PuTTYgen can convert
+                        keys
+                        to different formats.</p>
+                    <p>Mac equivalent to PuTTY: use the Terminal program in your Utilities folder. Your key file will
+                        need
+                        to be in .pem format for OpenSSH (Puttygen can do that conversion – discuss with your lecturer).
+                    </p>
+                    <p>To download PuTTY on your own computer, go to
+                        <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html"
+                            target="_blank">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a>
+                        and download the standalone programs from the “Alternative binary files” section (not from the
+                        “Package files” section). You probably need this one:
+                    </p>
+                    <p>putty.exe (the SSH and Telnet client itself) – the 64-bit x86 version</p>
+
+                    <h3>WinSCP</h3>
+                    <p>WinSCP is an FTP program for connecting to the server and uploading and editing files.</p>
+                    <p>Mac equivalent: Cyberduck.</p>
+                </section>
+
+                <!-- Section: Create an AWS EC2 instance -->
+                <section>
+                    <h2>Create an AWS EC2 instance (a.k.a. cloud server)</h2>
+                    <p>Log in to your AWS account and go to the EC2 service.</p>
+
+                    <h3>AWS Zone</h3>
+                    <p>AWS provides many services in “zones” around the globe. Set your zone to Asia Pacific Sydney
+                        before
+                        creating an EC2 instance:</p>
+                    <img src="img/aws_zone.png" alt="AWS Zone" class="img-fluid">
+
+                    <h3>Launch an Instance</h3>
+                    <p>Click the orange “Launch Instances” button.</p>
+                    <p>Refer to the “New Instance Settings” screenshot on Moodle for the settings to use – it is too
+                        large
+                        to paste here.</p>
+                    <p>One of the options to select involves creating a new key pair. Choose the .ppk format. See the
+                        following
+                        screenshot:</p>
+                    <img src="img/launch_instance.png" alt="Launch Instance" class="img-fluid">
+                </section>
+
+                <!-- Section: Get a fixed IP address -->
+                <section>
+                    <h2>Get a fixed IP address (an “Elastic IP”) for the instance</h2>
+                    <p>You need an IP address for the instance that won’t be changed if you stop (=shut down) and then
+                        start
+                        (=start up) your instance – this is called an “Elastic IP”. In the EC2 console select “Elastic
+                        IPs”
+                        (from the list at left) and then click the “Allocate Elastic IP address” button. Click the
+                        Allocate
+                        button to create the Elastic IP address.</p>
+                    <p>Now you need to associate that Elastic IP address with your EC2 instance. Select the Elastic IP
+                        address in the list (it will be selected by default). From the “Actions” dropdown menu select
+                        “Associate Elastic IP address”. Choose your instance in the Instance dropdown and click the
+                        Associate
+                        button.</p>
+                    <p>NOTE: An Elastic IP address is an AWS resource. It is included in the free tier as long as it is
+                        in
+                        use, which means that the instance it is associated with is running. If you stop your instance,
+                        charging for the Elastic IP will begin – so, keep your instance running all the time.</p>
+                </section>
+
+                <!-- Section: Convert the key file -->
+                <section>
+                    <h2>Convert the key file to the newer format</h2>
+                    <p>For security reasons, Ubuntu 22.04 does not support v2 PPK key files. However, when you created a
+                        key that is the format that was used. So, you need to start the Puttygen program and follow
+                        these
+                        steps:</p>
+                    <ol>
+                        <li>Click the Load button and find and open (load) the PPK key file you created.</li>
+                        <li>From the Key menu, choose “Parameters for saving key files…”</li>
+                        <li>Choose PPK file version 3 and click OK.</li>
+                        <li>Click the “Save private key” button (N.B. not public key).</li>
+                        <li>When asked if you want to save it without a passphrase, click Yes.</li>
+                        <li>Save the key file somewhere sensible and do not lose it! You can make copies of it, but
+                            store them securely.</li>
+                    </ol>
+                    <p>Mac Users: If you want to use a Mac (using the Terminal program), you will need to convert the
+                        PPK
+                        file to .pem format. This can be done in Puttygen by loading the key as above, but then instead
+                        of doing step 4 choose “Export OpenSSH Key” from the Export menu.</p>
+                </section>
+
+                <!-- Section: Connect to the instance -->
+                <section>
+                    <h2>Connect to the instance (server) using a terminal session (SSH)</h2>
+                    <p>Start PuTTY.</p>
+                    <p>Note: You can also AWS’s console (a web-based terminal emulator), although I find the behaviour
+                        when trying to paste text commands unreliable, which is annoying. To start the console, select
+                        your instance in the EC2 control panel and click “Connect”. Then select “EC2 Instance Connect
+                        (browser-based SSH connection)”.</p>
+                    <p>Follow these steps in PuTTY to connect to your instance to verify it has been created correctly:
+                    </p>
+                    <ol>
+                        <li>Enter the public IP address of your instance as the Host Name.</li>
+                        <li>(Optional:) Select Window > Appearance from the left panel and increase the font size to
+                            12-point or larger. I also prefer the Consolas font.</li>
+                        <li>Select Connection > Data from the left panel, enter ubuntu as the Auto-login username (it
+                            is case sensitive).</li>
+                        <li>Select Connection > SSH > Auth from the left panel, click the Browse… button to locate the
+                            version 3 .ppk key file you created with PuTTYgen and click Open.</li>
+                        <li>Select Session from the left panel, click the Save button, and provide a name (e.g., AWS
+                            Instance).</li>
+                        <li>Click Open to start the SSH session.</li>
+                    </ol>
+                    <p>When prompted, click Yes to add the EC2 instance to your PuTTY cache.</p>
+                    <p>You should now be connected to your EC2 instance via SSH.</p>
+                </section>
+
+                <!-- Section: Update the system packages -->
+                <section>
+                    <h2>Update the system packages</h2>
+                    <p>Before starting, update your system packages by running the following commands:</p>
+                    <pre><code class="language-bash">sudo apt update
+sudo apt upgrade -y</code></pre>
+                    <p>This will ensure that your system has the latest security updates and bug fixes.</p>
+                </section>
+
+                <!-- Section: Conclusion -->
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>These are the initial setup instructions for setting up an Amazon EC2 Linux server. Follow these
+                        steps
+                        carefully to ensure your server is properly configured.</p>
+                    <p>Remember to always keep your AWS account secure and follow best practices for managing your
+                        instances.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

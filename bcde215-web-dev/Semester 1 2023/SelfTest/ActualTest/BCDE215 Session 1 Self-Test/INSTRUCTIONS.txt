@@ -1,0 +1,7 @@
+Instructions
+
+Create the necessary HTML to get the structure (but not the layout!) shown in the Screenshot file.
+
+Your answer should include structural elements.
+
+Your HTML should validate!

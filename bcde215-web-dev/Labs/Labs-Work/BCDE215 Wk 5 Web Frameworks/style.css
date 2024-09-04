@@ -1,0 +1,338 @@
+/*****************************************************************************/
+/*                                                                           */
+/* Scroll to the bottom to the see the media queries needed for this answer. */
+/*                                                                           */
+/*****************************************************************************/
+
+
+
+/* RESET */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    /* The width of an element will be the size of its border box,
+       not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+
+/* LAYOUT */
+
+/* The default layout is single column, so we don't 
+   need a grid or flexboxes. These are set up below 
+   in the media queries.
+   
+   We will set a max-width on the body, though, 
+   so that our layout does not break on browsers 
+   (it would default to 100% of the width of the 
+   window, which isn't what we want for old browsers 
+   that don't understand media queries or grid, etc.
+   
+   Note the padding and margins that are set here, 
+   so that text is not hard up against the edges of 
+   the viewport.
+*/
+
+body {
+    /* These rules need to be overridden in the media queries. */
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 1em;
+}
+
+header {
+    text-align: center;
+}
+
+#main-image {
+    margin-top: 2em;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+}
+
+nav,
+h1,
+h2,
+#site-name,
+.caption,
+footer a {
+    font-family: "Century Gothic", Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+
+    /* We don't want the h1 to be bold. */
+    font-weight: normal;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+#site-name {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+nav {
+    font-size: 1.25rem;
+}
+
+.caption {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.painting-title {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+header {
+    background-color: #d4af37;
+}
+
+nav {
+    background-color: #adb3ad;
+}
+
+h1 {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+a:hover,
+.active {
+    color: #ffff00;
+}
+
+main a:hover {
+    color: #ff0000;
+}
+
+footer {
+    background-color: #666666;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+
+/* NAVIGATION */
+
+nav ul,
+footer ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 0.5em;
+}
+
+nav a,
+footer ul a {
+    text-decoration: none;
+}
+
+
+/* IMAGES */
+
+img {
+    width: 100%;
+}
+
+#logo {
+    width: 205px;
+}
+
+
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 58em) {
+
+    body {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 56rem 1fr;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+        grid-column: 2;
+    }
+
+    /* Flexboxes */
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main {
+        display: flex;
+    }
+
+    #content {
+        width: 60%;
+        padding-right: 2em;
+    }
+
+    #main-image {
+        width: 40%;
+        margin-top: 0;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Padding */
+
+    main {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (min-width: 86em) {
+
+
+    body {
+        grid-template-columns: 1fr 16rem 68rem 1fr;
+    }
+
+    header,
+    footer {
+        grid-column: 2 / 4;
+    }
+
+    nav {
+        grid-column: 2;
+    }
+
+    main {
+        grid-column: 3;
+    }
+
+
+    /* Flexboxes */
+
+    nav ul {
+        display: block;
+    }
+
+    #content,
+    #main-image {
+        width: 50%;
+    }
+
+
+    /* Padding here and there */
+    header,
+    footer {
+        padding: 1em 2em;
+    }
+
+    nav {
+        padding: 2rem;
+    }
+
+    main {
+        padding-left: 2em;
+    }
+
+}

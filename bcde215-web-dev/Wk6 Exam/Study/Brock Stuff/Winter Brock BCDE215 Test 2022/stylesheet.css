@@ -1,0 +1,287 @@
+/* RESET - DO NOT EDIT */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+/* END OF RESET */
+
+
+/* YOUR ANSWER HERE */
+
+
+/* Flexboxes */
+
+header, h1 {
+    text-align: center;
+}
+
+
+
+aside div{
+	display: flex;
+	flex-direction: row;
+}
+
+
+/*#Red-Squire{
+		display: flex;
+		flex-direction: column;
+}*/
+
+/* Margins and padding */
+
+nav, main, aside, footer {
+    padding: 1em;
+}
+
+
+aside div {
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    font-size: 2.5rem;
+}
+
+header{
+	padding:1.5rem;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+	padding: 1rem;
+}
+
+h3 {
+	padding: 0.5rem;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+
+aside {
+    text-align: center;
+}
+
+aside p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.award-name {
+    font-style: italic;
+}
+
+h2 ,h3, p{
+  text-align: left;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+
+aside{
+	background-color: #DACDAF;
+}
+
+footer, header{
+	background-color: #C1B688;
+	color: white;
+}
+
+
+h1, h2, h3, .selected{
+	color: red;
+}
+
+
+ul li, li a{
+	color: white;
+}
+
+
+nav{
+	background-color: #BEB7A6;
+}
+
+
+aside > div {
+    border: 1px solid #888;
+	width: 100%
+}
+
+
+
+
+
+
+/* NAVIGATION */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+
+/* IMAGES */
+img {
+    width: 100%;
+}
+
+div img{
+	width: 50%;
+}
+
+main img{
+	width: 35%;
+	float: left;
+	padding: 0 10px 0 0;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 42em) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 20rem 40rem 1fr;
+    }
+    
+    header, nav, footer {
+        grid-column: 1 / 4;
+    }
+
+    main {
+        grid-column: 3;
+		grid-row:3/4;
+    }
+	
+	aside {
+        grid-column: 2;
+		grid-row:3/4;
+    }
+    
+	aside{
+		width: 100%;
+	}
+    /* Flexboxes */
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+        
+ 
+    
+    aside > div {
+
+        width: 48%;
+		
+    }
+    
+    footer ul {
+        display: flex;
+        justify-content: center;
+    }
+   
+    /* Margins and padding */
+    
+    nav li {
+        margin: 0 1em;
+    }
+
+    footer li {
+        margin: 0 3em;
+    }
+	
+	footer {
+		display: flex;
+		justify-content: space-around;
+		}
+
+}
+
+@media screen and (min-width: 62em) {
+    
+    /* Page grid */
+
+    body {
+        grid-template-columns: 1fr 10rem 40rem 20rem 1fr;
+    }
+
+    header, footer {
+        grid-column: 1 / 6;
+    }
+
+	nav {
+        grid-column: 2;
+		grid-row:2;
+    }
+	
+    main {
+        grid-column: 3;
+		grid-row:2;
+    }
+	
+	aside {
+        grid-column: 4;
+		grid-row:2;
+    }
+
+
+    
+    aside {
+        display: block;
+    }
+    
+    aside > div {
+        width: 100%;
+    }
+	
+	footer li {
+        margin: 0 6em;
+    }
+    
+	/* Flexboxes */
+	nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	li{
+		display: flex;
+		justify-content: space-between;
+		}
+}
+
+

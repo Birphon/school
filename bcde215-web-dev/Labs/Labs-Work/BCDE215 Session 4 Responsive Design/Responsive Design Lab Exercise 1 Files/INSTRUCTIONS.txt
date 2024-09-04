@@ -1,0 +1,85 @@
+INSTRUCTIONS
+
+Add the viewport meta element, media queries and CSS to produce the two-column and three-column layout shown in the screenshots.
+
+NOTES:
+
+1. The large image is part of the page content, so is in the <main> element, not in an aside. Look at the HTML code.
+
+2. I have used max-width on the body and auto left and right margins to centre the single-column design. That max-width will need to be overridden in a media query. You can scroll down this document to see the code to do it if you can't work it out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Are you sure you don't want to try a bit more before looking at the answer? If not, keep scrolling down...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In the first media query, put this code:
+
+body {
+    max-width: 100%;
+}

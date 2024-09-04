@@ -1,0 +1,89 @@
+/* TYPOGRAPHY */
+
+body {
+    font-family: Verdana;
+    line-height: 1.5; /* Creates spacing between lines of text */
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+/* Use a descendant selector here because the reason 
+   an h2 is centre-aligned is that it is in an aside. */
+aside h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+#site-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Why am I using a descendant selector here? */
+nav a {
+    /* Don't type the content in caps - what if
+       you need to change it later? Transform it
+       using CSS. */
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.title {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME */
+
+body {
+    color: #333333;
+}
+
+header {
+    background-color: #e0d23a;
+    color: #000;
+}
+
+nav, footer {
+    background-color: #8c212a;
+}
+
+aside {
+	background-color: #fcf9e3;
+}
+
+h1, h2 {
+    color: #d61929;
+}
+
+nav a, footer {
+    color: #ffffff;
+}
+
+#current-page {
+    color: #e0d23a;
+}
+
+
+/* MISC */
+
+/* Use a descendant selector here because the reason 
+   the list has no style-type is that it is the main
+   menu, which is the nav element. */
+nav ul {
+    list-style-type: none;
+}

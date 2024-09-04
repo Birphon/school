@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AWS Setup<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ec2_linux_setup.html">AWS EC2 Setup</a></li>
+                            <li><a href="web_server_install.html">Web Server Install</a></li>
+                            <li><a href="website_setup_instruction.html">Website Setup</a></li>
+                            <li><a href="backup_instructions.html">Backup Setup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
+                            <li><a href="ecom.html">Ecommerce</a></li>
+                            <li><a href="django.html">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Section: Introduction -->
+                <section>
+                    <h1 class="text-center">Welcome to a Django Setup Tutorial</h1>
+                    <br>
+                    <p>This website is a tutorial that provides step-by-step instructions for setting up a Django
+                        project.
+                        Whether you are new to Django or looking to enhance your skills, this tutorial will guide you
+                        through the process of setting up the necessary AWS infrastructure, configuring instance
+                        settings,
+                        installing a web server, and setting up your website. Follow along to learn how to create a
+                        Django
+                        website from scratch and explore topics such as backup setup and making a Django website using
+                        this
+                        comprehensive tutorial.</p>
+                    <p>Note: There will most likely be errors along the way as to make this site, even if you follow
+                        this
+                        process to a T. <br> You can do the following:</p>
+                    <ul>
+                        <li><code>sudo rm -r [directory]</code> - this one is the most radical as it's just restarting
+                            completely</li>
+                        <li>Look at the Apache Logs: <code>/var/log/apache2/</code></li>
+                        <li>Try and debug with whatever the PuTTY gives you - some of these can be straightforward,
+                            others
+                            not so much</li>
+                        <li>Ask people around you then ask the Lecture/s - Apply the "See Three Before Me" rule</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Minor Explanation:</p>
+                    <ol>
+                        <li>AWS Setup -- Setting up the AWS Account</li>
+                        <li>Website Server Install -- Apache Setup for the AWS Server</li>
+                        <li>Website Setup -- Obtaining the Domain Name, Creating Configs and Giving it all a
+                            Certificate</li>
+                        <li>Backup Setup -- Enabling backups</li>
+                        <li>Tips -- Couple general tips</li>
+                        <li>Django Setup -- Setting up Django</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="js/navbar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+INSTRUCTIONS
+
+Make the web page responsive. There aren't any screenshots this time - design your own.
+
+Before you start coding, plan the designs - create wireframes showing the page structure like we do in class.
+
+Start with the next size up from the single column design (uh, two columns?). Work out how wide each of its columns will be and create a media query to match that total width (plus 2ems for the scroll bar).

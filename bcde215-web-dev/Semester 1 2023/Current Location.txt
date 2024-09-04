@@ -1,0 +1,2 @@
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-20-04-with-a-lamp-stack

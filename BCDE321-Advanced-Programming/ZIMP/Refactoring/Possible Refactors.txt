@@ -1,0 +1,27 @@
+Possible:
+
+	Composite (Probs not this):
+		make a Composite for all the cards?
+		    type: outdoor
+		    type: indoor
+		    all cards sit as Composite
+
+	Factory:
+		all the IF statements in Game
+
+	Single Responsibility:
+		Splitting up the 1 page into multiple
+
+	Long Class
+		Game.py is really long
+
+	Abstract/Factory:
+		Game.py IF statements (Depends on how Long Class gets split i guess)
+			Attack/Move/DrawCard(?) into "Action.py"
+			Loading stuff -> Loader.py
+
+        Tiles
+        Item's
+        Zombie Action's?
+            (Attack, Cower, Run)
+        DevCards

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Artworks - Artworks NZ
+{% endblock %}
+
+{% block content %}
+<section class="artwork-list-section">
+    <h2>Artworks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Artwork Name</th>
+                <th>Artist</th>
+                <th>Media Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artwork in artworks %}
+            <tr>
+                <td>{{ artwork.artwork_name }}</td>
+                <td>{{ artwork.artist.full_name }}</td>
+                <td>{{ artwork.media_type }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

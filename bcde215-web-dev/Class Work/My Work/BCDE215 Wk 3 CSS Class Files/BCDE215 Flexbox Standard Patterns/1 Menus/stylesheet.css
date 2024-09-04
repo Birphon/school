@@ -1,0 +1,94 @@
+nav ul {
+    display: flex;
+}
+
+/* FIRST EXAMPLE */
+#first-example ul {
+    /* justify-content: flex-start;  This is the default, so we don't need to specify it. */
+}
+
+#first-example li {
+    margin-right: 2em; /* Push the menu items away from each other. */
+}
+
+
+/* SECOND EXAMPLE */
+#second-example ul {
+    justify-content: flex-end;
+}
+
+#second-example li {
+    margin-left: 2em; /* Push the menu items away from each other. */
+}
+
+
+/* THIRD EXAMPLE */
+#third-example ul {
+    justify-content: center;
+}
+
+#third-example li {
+    padding: 0 1em; /* Push the menu items away from each other. Why padding: can add vertical lines (borders) between items. */
+}
+
+
+/* FOURTH EXAMPLE */
+#fourth-example ul {
+    justify-content: space-between;
+}
+
+
+
+/* == OTHER CSS ===================================================== */
+
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+* {
+    box-sizing: border-box;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+/* LAYOUT */
+
+body {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+nav {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+
+/* COLOUR SCHEME */
+
+nav {
+    background-color: #0088ee;
+}
+
+nav a {
+    color: #ffffff;
+}
+

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Box of Toys Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="BoxToy.js"></script>
+</head>
+
+<body>
+  <!-- add vue attributes to this section -->
+  <section id="box-toys">
+
+    <div id="input">
+      <input id="name" ></input>
+      
+      <input id="color" ></input>
+      
+      <input id="cost" ></input>
+      
+      <input id="add" type="button" value="add"  ></input>
+      <br><br>
+    </div>
+
+    <output id="output"  >
+    <ul>
+      <li>A toy.name which is toy.color and costs $toy.cost</li>
+    </ul>
+    </output>
+  </section>
+
+
+  <script>
+    /*
+      add data and methods to the script
+    */
+    var app = new Vue({
+      el: '#box-toys',
+      data: {
+        
+      },
+      methods: {
+
+        }
+      }
+    })
+  </script>
+<body>
+</html>

@@ -1,0 +1,53 @@
+Title
+=====
+
+Music of Nikau Jansen
+
+
+Header
+======
+
+The Music of Nikau Jansen
+
+
+Main menu
+=========
+
+Concerts
+News
+About
+
+
+Text for images
+===============
+
+The following text should display if images cannot be loaded:
+nikau-jansen.jpg: "Nikau Jansen"
+hanover-concert.jpg: "Hanover Concert"
+music-studio.jpg: "Music Studio"
+paris-concert.jpg: "Paris Concert"
+wellington-concert.jpg: "Wellington Concert"
+
+Page text
+=========
+
+Concerts
+
+Nikau Jansen (born 3 January 1987) is a fictional musician born in Wellington, New Zealand. He is a New Zealand musician, singer–songwriter and record producer, of M[a with a macron]ori and New Zealand European descent. In his early career he was a member of the rock group The Smash. Since then he has released the majority of his recordings as a solo performer.
+
+Jansen's second album More Songs About Dolphins (2009) is certified gold in his home country, New Zealand, but failed to chart overseas.
+
+Hanover Concert, 2020
+Paris Concert, 2021
+Wellington Concert, 2023
+
+Upcoming Album Release
+
+Coming soon is an album of music inspired by Nikau's travels around Aotearoa.
+
+Bottom of page
+==============
+
+Licencing
+Legal Notice
+Terms ampersand Conditions

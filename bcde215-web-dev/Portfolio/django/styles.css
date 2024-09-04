@@ -1,0 +1,161 @@
+/* base.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* home.css */
+.welcome-section {
+    text-align: center;
+}
+
+.welcome-section img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+/* artwork_detail.css, artist_detail.css, artwork_list.css, artist_list.css */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* artwork_create.css, artist_create.css */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* admin.css */
+.admin-login-section {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.admin-login-section form {
+    margin-top: 20px;
+}
+
+.admin-login-section form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.admin-login-section form input[type="text"],
+.admin-login-section form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.admin-login-section form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.admin-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.admin-section nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-section nav ul li {
+    margin-right: 20px;
+}
+
+.admin-section nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.admin-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}

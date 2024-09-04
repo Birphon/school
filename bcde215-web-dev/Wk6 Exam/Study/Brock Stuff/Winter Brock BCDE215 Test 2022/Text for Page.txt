@@ -1,0 +1,63 @@
+Title
+=====
+
+NZ Artists | Ralph Hotere
+
+
+Header
+======
+
+Ralph Hotere
+
+
+Main menu
+=========
+
+Artworks
+News
+Biography
+
+
+Text for images
+===============
+
+The following text should display if images cannot be loaded:
+ralph-hotere.jpg: "Ralph Hotere"
+godwit-kuaka.jpg: "Godwit/Kuaka"
+red-square-four.jpg: "Red Square Four"
+
+
+Page text
+=========
+
+Biography
+
+Ralph Hotere was an important M[a with a macron]ori painter and sculptor. He was known for his minimal Black paintings, composed of simple bands or crosses of color laid over dark backgrounds. One of eleven children, Hone Papita Raukura (Ralph) Hotere was born in Mitimiti, Northland, in 1931. He was educated at Hato Petera College and Auckland Teachers' College, before moving to Dunedin in 1952 to specialise in art. After a spell in the Bay of Islands as an arts advisor for the Education Department, Ralph was awarded a New Zealand Art Societies Fellowship to study in London at the Central School of Art[link] in 1961. His time in England proved to be pivotal to his development as an artist.
+
+Ralph was then awarded the Frances Hodgkins Fellowship and moved to Dunedin permanently in 1969. He died on 24 February 2013, aged 81.
+
+Link: en.wikipedia.org/wiki/Central_School_of_Art_and_Design
+
+
+Latest News
+
+Retrospective
+
+A retrospective celebration of Hotere's life and works is in the planning.
+
+Featured Work
+
+[image:] red-square-four.jpg
+Red Square Four
+
+Red Square Four
+Cruciform II
+Black Painting
+
+
+Bottom of page
+==============
+
+[copyright symbol] Ara, 2021
+Supported by the New Zealand Arts Council
+Website by CmBDesign

@@ -1,0 +1,83 @@
+# CERTBOT STUFF - Run through this first before making a website!
+    sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/project-directory.conf
+    sudo nano /etc/apache2/sites-available/project-directory.conf
+    #ServerName www.example.com -- Change
+    DocumentRoot /var/www/html -- Change
+    sudo mkdir /var/www/project-directory
+    sudo chown ubuntu /var/www/project-directory
+    sudo a2ensite project-directory
+    sudo systemctl reload apache2
+    sudo certbot --apache
+
+# CHANGE THE CONFS OWNERSHIP TO UBUNTU!!
+    sudo chown ubuntu [project-directory].conf
+    sudo chown ubuntu [project-directory]-le-ssf.conf
+
+# Add python
+    python3 -m venv venv
+
+# Activating Python
+    source venv/bin/activate
+
+# Install Packages
+    pip install django
+    sudo apt install libapache2-mod-wsgi-py3
+    sudo apt install default-libmysqlclient-dev
+    pip install wheel
+    pip install pillow
+    pip install mysqlclient
+
+# Make Django App
+    django-admin startproject [name]
+
+# Move Django stuff around
+    mv django-project-name/manage.py ./
+    mv django-project-name/django-project-name/* django-project-name
+    rm -r django-project-name/django-project-name/
+
+# Edit Allowed Hosts
+    sudo nano /var/www/[project-directory]/[django-project-name]/settings.py
+        - ALLOWED_HOSTS = ['[link]']
+
+# Migrates:
+    python3 manage.py makemigrations
+    python3 manage.py migrate   
+
+# Run Server - Development only
+    python3 manage.py runserver 0.0.0.0:8000
+
+# Add Database:
+    sudo mysql -u root -p
+    mysql> CREATE DATABASE database_name CHARACTER SET utf8 COLLATE utf8_general_ci;
+    mysql> CREATE USER 'database_user'@'localhost' IDENTIFIED BY 'your_password';
+    mysql> GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';
+    mysql> exit
+
+    # Example for the Portfolio
+    sudo nano /var/www/[project-directory]/[django-project-name]/settings.py
+    DATABASES = {
+    'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'artworknz_db',
+            'USER':'artworknz_user',
+            'PASSWORD':'password',
+            'HOST':'localhost',
+            'PORT':'3306'
+        }
+    }
+
+# WSGI Stuff:
+    # this goes into [project-directory]-le-ssf.conf
+        <Directory /var/www/[project-directory]/[django-project-name]>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+        </Directory>
+
+        WSGIDaemonProcess [wsgi_proj_name] python-path=/var/www/[project-directory]/[django-project-name] python-home=/var/www/[project-directory]/[django-project-name]/venv
+        WSGIProcessGroup [wsgi_proj_name]
+        WSGIScriptAlias / /var/www/[project-directory]/[django-project-name]/wsgi.py
+
+# This is all the stuff for setting up and making a Generic Project and edditing some stuff.
+# Everything now is done with the django-admin startapp [appname]
+# There is some minor edits like the media and statics folder though I move this into my App location sincethe templates (HTML) is also here

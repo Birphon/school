@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ artist.first_name }} {{ artist.last_name }} - Artworks NZ
+{% endblock %}
+
+{% block content %}
+<section class="artist-detail-section">
+    <h2>{{ artist.first_name }} {{ artist.last_name }}</h2>
+    <p><strong>Location:</strong> {{ artist.location }}</p>
+    <p><strong>Primary Media:</strong> {{ artist.primary_media }}</p>
+
+    <h3>Artworks</h3>
+    <ul>
+        {% for artwork in artist.artwork_set.all %}
+        <li><a href="/artworks/{{ artwork.id }}/">{{ artwork.artwork_name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="/artists/{{ artist.id }}/update/">Edit Artist</a>
+</section>
+{% endblock %}

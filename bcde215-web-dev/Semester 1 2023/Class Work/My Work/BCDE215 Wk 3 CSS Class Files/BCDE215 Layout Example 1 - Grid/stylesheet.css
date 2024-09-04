@@ -1,0 +1,232 @@
+/* RESET */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    /* The width of an element will be the size of its border box,
+       not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+/* == END RESET =========================================== */
+
+
+/* LAYOUT */
+
+body {
+    /* 1. Our main layout structure for the whole page will be a grid. Note
+       that when we first create the grid, nothing appears to change - that's
+       because the grid will default to one column. */
+    display: grid;
+
+    /* 2. Create three columns - the fr unit means "fraction". Because we
+       have 1fr, 2fr, and 1fr columns we have 4fr in total. The first column
+       is 1fr out of 4fr, so will be 1/4 of the total width of the grid
+       (which is the body). The second column is 2fr out of 4fr, so will be
+       1/2 of the total width of the grid. The third column is also 1/4 of
+       the width of the grid. Note how the child boxes are put into cells if
+       they aren't specifically placed in the grid. */
+    grid-template-columns: 1fr 2fr 1fr;
+
+    /* Note that we don't have to set up rows (although we could) - they will
+       automatically be created in the grid as required. */
+}
+
+/* 3. Position the header across all the columns in the first row.
+      The 1 / 4 notation means: start at grid line 1 and end at line 4.
+      This has the effect of spanning 3 columns (think about it!).
+      Notice how the other elements are positioned in the grid when the
+      header spans all columns.  Also notice that the header creates its
+      own row in the grid because it spans the total number of columns.
+      */
+header,
+footer {
+    grid-column: 1 / 4;
+}
+
+/* 4. Position the footer across all the columns. Because the nav, main, 
+      and aside create a row, the footer will create a new row in the grid. */
+/*footer {
+    grid-column: 1 / 4;
+}*/
+
+/* The following positions in the grid are automatically worked out, so
+   we actually do not need to uncomment these rules. The reason is that
+   these elements are only going to take up a single grid cell, so they
+   are each placed into the next available cell. The rules are given here
+   so that you can see where the grid container is actually placing them.
+   */
+nav {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+aside {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+
+
+/* OTHER LAYOUT */
+
+header {
+    padding: 0.5em;
+}
+
+main {
+    padding: 1em 2em;
+}
+
+aside,
+footer {
+    padding: 1em;
+}
+
+
+/* TYPOGRAPHY */
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-family: Verdana;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 0.5em 0;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: right;
+}
+
+
+/* COLOUR & BORDERS SCHEME */
+
+header {
+    background-color: #ffff00;
+}
+
+nav {
+    background-color: #27418e;
+    color: #ffffff;
+}
+
+nav li {
+    border-bottom: 1px solid #eeeeee;
+}
+
+nav li:hover {
+    background-color: #444444;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+main {
+    background-color: #dddddd;
+}
+
+aside {
+    background-color: #327517;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+
+/* MAIN MENU */
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0.5em 1em;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+}
+
+
+/* MISC */
+
+aside ul {
+    list-style-type: none;
+}

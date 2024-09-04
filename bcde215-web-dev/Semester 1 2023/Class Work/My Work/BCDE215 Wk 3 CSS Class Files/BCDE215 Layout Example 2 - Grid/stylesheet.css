@@ -1,0 +1,195 @@
+/* LAYOUT */
+
+
+
+
+/* OTHER LAYOUT */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    /* The width of an element will be the size of its border box,
+       not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+header {
+    padding: 0.5em;
+}
+
+main {
+    padding: 1em 2em;
+}
+
+aside,
+footer {
+    padding: 1em;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+}
+
+header,
+footer {
+    grid-column: 1 / 5;
+}
+
+nav {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+main {
+    grid-column: 3;
+    grid-row: 2/ span 3;
+    /* had to use SPAN here for some reason*/
+}
+
+aside {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+/* TYPOGRAPHY */
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-family: Verdana;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 0.5em 0;
+}
+
+h3 {
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: right;
+}
+
+
+/* COLOUR & BORDERS SCHEME */
+
+header {
+    background-color: #ffff00;
+}
+
+nav {
+    background-color: #27418e;
+    color: #ffffff;
+}
+
+nav li {
+    border-bottom: 1px solid #eeeeee;
+}
+
+nav li:hover {
+    background-color: #444444;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+main {
+    background-color: #dddddd;
+}
+
+aside {
+    background-color: #327517;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+
+/* MAIN MENU */
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0.5em 1em;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+}
+
+
+/* MISC */
+
+aside ul {
+    list-style-type: none;
+}

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelDesigner", "Brock_A2_Sem2_2022\LevelDesigner.csproj", "{8094F597-8735-4A66-9B3B-19C61C225F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{C720AEF4-75E3-4591-AAAA-BC5716801731}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8094F597-8735-4A66-9B3B-19C61C225F45} = {8094F597-8735-4A66-9B3B-19C61C225F45}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8094F597-8735-4A66-9B3B-19C61C225F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8094F597-8735-4A66-9B3B-19C61C225F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8094F597-8735-4A66-9B3B-19C61C225F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8094F597-8735-4A66-9B3B-19C61C225F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C720AEF4-75E3-4591-AAAA-BC5716801731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C720AEF4-75E3-4591-AAAA-BC5716801731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C720AEF4-75E3-4591-AAAA-BC5716801731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C720AEF4-75E3-4591-AAAA-BC5716801731}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60D5F5E0-3228-4FEA-A26D-C8045A2AF2D0}
+	EndGlobalSection
+EndGlobal

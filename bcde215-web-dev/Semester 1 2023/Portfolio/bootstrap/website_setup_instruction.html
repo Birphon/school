@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Website Setup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="themes/prism.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">HOME</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">AWS Setup<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ec2_linux_setup.html">AWS EC2 Setup</a></li>
+                            <li><a href="web_server_install.html">Web Server Install</a></li>
+                            <li><a href="website_setup_instruction.html">Website Setup</a></li>
+                            <li><a href="backup_instructions.html">Backup Setup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bootstrap.html">Bootstrap</a></li>
+                            <li><a href="ecom.html">Ecommerce</a></li>
+                            <li><a href="django.html">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Section: Introduction -->
+                <section>
+                    <h1 class="text-center">Amazon EC2 Website Setup Instructions</h1>
+                    <p class="text-center">4 April 2023, Chris Bartlett</p>
+                    <p class="text-center"><span class="alert">IMPORTANT: Read all instructions before
+                            starting.</span></p>
+                    <p>This document shows how to get a domain name and set up a basic website.</p>
+                </section>
+
+                <section>
+                    <h2>Get a domain name</h2>
+                    <p>In the past we have used free domains, but the service we used now allows only one free domain.
+                        We need to be able to create a number of domains (actually subdomains) for the website projects
+                        we work on. It is possible to get a domain for US$5 (annual) from Amazon, which is what I show
+                        here.</p>
+                    <p>Go to the AWS Route 53 service and click Register Domain:<img src="img/route_53_dash.png"></p>
+                    <p>For this course I require you to have your name in your domain, so that support and marking etc.,
+                        is manageable. If you already have a domain and want to use that, please discuss with me.</p>
+                    <p>Enter your name (lowercase, no spaces) and choose the .link domain (this is the cheapest, at
+                        US$5). Click the “Check” button to make sure the domain is available. Modify your name if it
+                        isn't (e.g., add a middle initial and check again). Add the domain name to the cart.</p>
+                    <p><img src="img/choose_domain_name.png"></p>
+                    <p>
+                        Click the Continue button (scroll down to find it) and then fill out the registrant contact
+                        details with your information.<br>
+                        Continue to the final screen (Verify & Purchase). You might want to choose “Disable” for the “Do
+                        you want to automatically renew your domain?” question.<br>
+                        Complete the order.
+
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Point your domain at your instance</h2>
+                    <p>You have to link your new domain name with your instance’s IP address. Go to the Route53 service
+                        and
+                        click Hosted zones in the left-side menu. Then click your domain name:<img
+                            src="img/record_making_1.png"></p>
+                    <p>Then click the “Create record” button. On the next screen enter your IP address and click Create
+                        Records.<img src="img/record_making_2.png"></p>
+                </section>
+                <section>
+                    <h2>Create a wildcard DNS record</h2>
+                    <p>The Domain Name System cannot guess that your subdomains (e.g., test.hemibrown.org) are hosted
+                        where
+                        your main domain points in the DNS. You need a wildcard A record in the DNS if you want any
+                        subdomain to point at your instance. Click “Create record” again, but this time enter * (the
+                        asterisk character) in the Record Name field, as shown in the following screenshot. Click
+                        “Create
+                        Records” when you are done.</p>
+                    <img src="img/wildcard_dns.png">
+                </section>
+
+                <section>
+                    <h2>Configure the webserver (Apache) to serve a website</h2>
+                    <h3>Introduction: suggested naming conventions</h3>
+                    <p>Because you are going to set up several websites, you should make use of subdomains for each one.
+                        For example, if your main domain name is hemibrown.link, then you should set up each website
+                        with its own subdomain; e.g., you might have three websites with the following subdomains:
+                    <ul>
+                        <li>test-website.hemibrown.link</li>
+                        <li>bootstrap-portfolio.hemibrown.link</li>
+                        <li>wordpress-portfolio.hemibrown.link</li>
+                    </ul>
+                    </p>
+                    <p>Each website should be in its own directory in the /var/www directory. It is advisable to name
+                        those directories to match the domain names in some way, to avoid confusion. For example, the
+                        websites for the domains above could be in these directories:
+                    <ul>
+                        <li>/var/www/test-website/</li>
+                        <li>/var/www/bootstrap-portfolio/</li>
+                        <li>/var/www/wordpress-portfolio/</li>
+                    </ul>
+                    </p>
+                    <p>When you create the Apache configuration files for each website (see below) you should also name
+                        them to match the website subdomains. For example, the websites for the domains above could be
+                        configured in these files:
+                    <ul>
+                        <li>/etc/apache2/sites-available/test-website.conf</li>
+                        <li>/etc/apache2/sites-available/bootstrap-portfolio.conf</li>
+                        <li>/etc/apache2/sites-available/wordpress-portfolio.conf</li>
+                    </ul>
+                    </p>
+                    <p>There is nothing magic about this suggested naming convention (names of files and directories do
+                        not have to match), but you will get very confused if they don’t!
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Configure a website</h2>
+                    <p><b>NOTE: Where it says “your-project-name” below, substitute something you choose, following the
+                            suggested naming conventions above. Do not use spaces.</b></p>
+                    <p>Connect to your instance via SSH (e.g., using PuTTY).
+                        Create a configuration file for your website, based on the default configuration file. The next
+                        command is one line:
+                    <pre><code class="language-bash">sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/your-project-name.conf</code></pre>
+                    </p>
+                    <p>Edit the website’s configuration file:
+                    <pre><code class="language-bash">sudo nano /etc/apache2/sites-available/your-project-name.conf</code></pre>
+                    (1) Change this line from:
+                    <pre><code class="language-bash">#ServerName www.example.com</code></pre>
+                    To this (using your own website domain or a subdomain of it) – make sure you remove the
+                    comment
+                    character (the hash) at the start and don’t use www at the start (your domain name is not
+                    configured
+                    to use www…):
+                    <pre><code class="language-bash">ServerName your.website.domain</code></pre>
+
+                    (2) Tell the webserver where your web files are - change this line from:
+                    <pre><code class="language-bash">DocumentRoot /var/www/html</code></pre>
+                    To this:
+                    <pre><code class="language-bash">DocumentRoot /var/www/your-project-name</code></pre>
+
+                    Exit, saving changes
+                    <pre><code class="language-bash">ctrl-x</code> (answer y, then press enter)</pre>
+                    Make a directory that you will put the website’s files into
+                    <pre><code class="language-bash">sudo mkdir /var/www/your-project-name</code></pre>
+                    Give the ubuntu user access to that directory
+                    <pre><code class="language-bash">sudo chown ubuntu /var/www/your-project-name</code></pre>
+                    Enable the website
+                    <pre><code class="language-bash">sudo a2ensite your-project-name</code></pre>
+
+                    Reload the webserver to apply the changes
+                    <pre><code class="language-bash">sudo systemctl reload apache2</code></pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Create a test home page for the new web site</h2>
+                    <p>
+                        Create an HTML file called index.html (or get some web files, such as the case study) and upload
+                        it into the directory you created for the website above, using WinSCP (connect in the same basic
+                        way you did with PuTTY, with the ubuntu user name and the key file). Test it in your web
+                        browser.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Set up secure serving of the website</h2>
+                    <p>
+                        If you have not already done this, install Certbot (you only need to do this the first time),
+                        following the instructions on the Certbot website: <a
+                            href="https://certbot.eff.org/">https://certbot.eff.org/</a><br>Note: Only run through Steps
+                        1 to 6</p>
+                    <p> Make sure you choose
+                        the right options to get the appropriate instructions, as in the image below (note that the
+                        instructions for Ubuntu 20 also work for 22, which you have installed): <img
+                            src="img/certbot.png">
+                    </p>
+                    <p>
+                        Use Certbot to get a security certificate and install it (NOTE: do not use the certificate-only
+                        instructions). You will be required to answer a number of questions.
+                    <pre><code class="language-bash">sudo certbot --apache</code></pre>
+                    Now try it in your web browser by going to https://your.website.domain. Also check that HTTP
+                    traffic is switched to HTTPS: http://your.website.domain.
+
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="js/navbar.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

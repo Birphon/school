@@ -1,0 +1,186 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+* {
+    box-sizing: border-box;
+}
+
+
+/* LAYOUT */
+
+/* The default layout (before any media queries take effect) is a single-column
+   layout with the principal structural elements as blocks in normal flow. That
+   is: the header, nav, main, child elements of main, aside, and footer are allowed
+   to take their normal positions one after the other down the viewport (window).
+   We don't need a grid or other layout CSS for this. A bit of padding, so that
+   text is not right up against the edge of the window is nice. Notice how the 
+   padding is applied to #content (the text), not all of <main> - see what this does
+   for the primary image. */
+   
+header, nav, #content, aside, footer {
+    padding: 1em;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    /* Let's have a main heading size that isn't too big for small windows. */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    /* H2 will also be smaller */
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+
+/* COLOUR SCHEME */
+
+body {
+    color: #444;
+}
+
+header {
+    background-color: #0f6996;
+    color: #fff;
+}
+
+main {
+    background-color: #128482;
+    color: #fff;
+}
+
+aside {
+    background-color: #ecefbf;
+}
+
+footer {
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* MAIN MENU */
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0.5em 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+}
+
+
+/* IMAGES */
+
+img {
+    width: 100%;
+}
+
+#primary-image img {
+    /* ADVANCED: Without this rule there would be a small amount of space under 
+       the image. Comment out this rule and see the difference - it is only
+       really noticeable when the image is to the side of to the main text,
+       which happens at a wide window width. */
+    display: block;
+}
+
+
+/* RESPONSIVENESS */
+
+/* When we have enough viewport (window) width available, we will rearrange the 
+   principal structural elements, so that the main and aside are in two columns.
+   We are also going to position the nav to the right of the header. */
+@media screen and (min-width: 44em) {
+    
+    body {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    header {
+        grid-column: 1;
+    }
+    
+    nav {
+        grid-column: 2;
+    }
+
+    /* We don't need to write rules to position the main and aside elements in 
+       the grid because the default positioning is exactly what we need. */
+    
+    footer {
+        grid-column: 1 / 3;
+    }
+    
+    /* Horizontal main menu (nav), right-aligned */
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        margin-left: 2em;
+    }
+    
+    /* Typography overrides */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    
+}
+
+
+/* When we have even more viewport width available we can move the primary image 
+   to the side of the text.
+   
+   IMPORTANT: Because the media query above is also true, the grid etc. will
+   still be applied. Read the INSTRUCTIONS file for more info about this. */
+@media screen and (min-width: 72em) {
+    
+    main {
+        display: flex;
+        padding: 0;
+    }
+    
+    main > div {
+        flex-basis: 50%;
+    }
+
+}

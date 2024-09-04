@@ -1,0 +1,81 @@
+Title
+=====
+
+New Zealand Writers :: Patricia Grace
+
+
+Top of page
+===========
+
+[image file:] logo.png
+
+New Zealand Writers
+
+
+Main menu
+=========
+
+Patricia Grace
+Witi Ihimaera
+Keri Hulme
+
+
+Text for images
+===============
+
+The following text should display if images cannot be loaded:
+logo.png: New Zealand Writers Logo
+patricia-grace.jpg: Patricia Grace
+books.jpg: Recent books
+huia11-short-stories.jpg: Huia 11 Short Stories
+pipituia-awards.jpg: Pipituia Awards
+
+
+Page text
+=========
+
+Patricia Grace
+
+Image captions:
+Patricia Grace
+Recent Books
+
+Patricia Frances Grace DCNZM QSO (born 1937) is a New Zealand Maori [NOTE: the 'a' in 'Maori' has a macron over it] writer of novels, short stories, and children's books. She was awarded the 2008 Neustadt International Prize for Literature.
+
+Biography
+
+Grace was born in Wellington, where she received the majority of her education.
+
+She began writing at age 25, while working full time as a teacher in North Auckland.
+
+
+Column 1
+========
+
+Current Best Sellers
+
+Pounamu, Pounamu by Witi Ihimaera
+Waiariki by Patricia Grace
+Dedications by J. C. Sturm
+
+New Release
+
+Here are the best short stories and novel extracts from the Pikihuia Awards for Maori Writers 2015 as judged by Witi Ihimaera, Sir Wira Gardiner and Poia Rewi.
+
+
+Column 3
+========
+
+News
+
+2019 Pikihuia Awards Winners Announced
+
+The winners of the Pikihuia Awards for short stories were announced last Saturday. Read more...
+
+
+Bottom of page
+==============
+
+Supporting NZ 100%
+Copyright Ara 2019
+Website by CMB Design
